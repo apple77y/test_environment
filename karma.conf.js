@@ -2,7 +2,38 @@
 // Generated on Tue May 30 2017 18:11:04 GMT+0900 (KST)
 
 module.exports = function(config) {
+    const webpack = {
+        devtool: 'inline-source-map',
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    exclude: /(node_modules)/,
+                    use: [
+                        {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: [
+                                    ['es2015']
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    };
+
   config.set({
+
+    plugins: [
+        'karma-jasmine',
+        'karma-chrome-launcher',
+        'karma-webpack',
+        'karma-sourcemap-loader'
+    ],
+
+    webpack: webpack,
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -27,6 +58,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        './test/**/*.spec.js': ['webpack', 'sourcemap']
     },
 
 

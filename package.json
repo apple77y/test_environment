@@ -12,10 +12,12 @@
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
     "webpack": "^2.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/.bin/karma start"
   },
   "repository": "https://oss.navercorp.com/hunyong-song/test_environment.git",
   "author": "hunyong.song <hunyong.song@nhn.com>",
