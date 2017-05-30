@@ -1,12 +1,17 @@
-## 개발 환경
+## 자스민 스탠드얼론
 
-![spinbox](./image_spinbox.png)
+### 테스트 실행 결과
 
-스핀 박스
+- `yarn install` 명령어 실행
+- `yarn run test` 명령어 실행
+- `SpecRunner.html` 실행 
 
-## 테스트 환경
+### 장점
 
-### 자스민: BDD 방식의 테스트 툴 [다운로드](https://jasmine.github.io/)
+- 원하는 Spec HTML에 CSS와 SCRIPT만 부르면 되므로 환경 구축이 간단함
+- Spec HTML에 테스트에 필요한 DOM을 편하게 추가할 수 있음
 
-- 자스민 스탠드얼론: Nodejs 환경과 별개로 독립적으로 실행 [Link](https://github.com/apple77y/test_environment/tree/jasmine-standalone)
-- 카르마 - 자스민: NPM 중 Karma 테스트 러너를 이용해서 자동화 [Link](https://github.com/apple77y/test_environment/tree/karma-jasmine)
+### 단점
+
+- 소스를 수정할 때마다 HTML을 일일이 갱신해야 됨
+    - Karma가 탄생한 배경
